@@ -241,70 +241,70 @@
  * Static comments (imported from Disqus)
  */
 .static-comments {
-    margin-top: $spacing-unit;
-    padding-top: $spacing-unit / 2;
-    border-top: 1px solid $grey-color-light;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #e8e8e8;
 }
 
 .comments-title {
-    margin-bottom: $spacing-unit / 4;
+    margin-bottom: 8px;
 }
 
 .comments-note {
-    color: $grey-color;
-    font-size: $small-font-size;
-    margin-bottom: $spacing-unit / 2;
+    color: #828282;
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 
 .comment {
-    margin-bottom: $spacing-unit / 2;
-    padding: $spacing-unit / 2;
-    background: lighten($grey-color-light, 10%);
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #f9f9f9;
     border-radius: 4px;
 }
 
-.comment-depth-1 { margin-left: $spacing-unit / 2; }
-.comment-depth-2 { margin-left: $spacing-unit; }
-.comment-depth-3 { margin-left: $spacing-unit * 1.5; }
+.comment-depth-1 { margin-left: 15px; }
+.comment-depth-2 { margin-left: 30px; }
+.comment-depth-3 { margin-left: 45px; }
 
 @include media-query($on-palm) {
     .comment-depth-1,
     .comment-depth-2,
     .comment-depth-3 {
-        margin-left: $spacing-unit / 4;
+        margin-left: 8px;
     }
 }
 
 .comment-header {
-    margin-bottom: $spacing-unit / 4;
-    font-size: $small-font-size;
+    margin-bottom: 8px;
+    font-size: 14px;
 }
 
 .comment-author {
     font-weight: bold;
-    margin-right: $spacing-unit / 4;
+    margin-right: 8px;
 }
 
 .comment-date {
-    color: $grey-color;
+    color: #828282;
 }
 
 .comment-body {
-    line-height: $base-line-height;
+    line-height: 1.5;
+}
 
-    p {
-        margin: 0.5em 0;
-    }
+.comment-body p {
+    margin: 0.5em 0;
+}
 
-    p:first-child {
-        margin-top: 0;
-    }
+.comment-body p:first-child {
+    margin-top: 0;
+}
 
-    p:last-child {
-        margin-bottom: 0;
-    }
+.comment-body p:last-child {
+    margin-bottom: 0;
 }
 
 .comment-replies {
-    margin-top: $spacing-unit / 2;
+    margin-top: 15px;
 }
