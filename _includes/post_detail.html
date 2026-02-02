@@ -20,4 +20,9 @@
     {% endif %}
   </div>
 
+  {% assign comment_file = site.data.comments.posts[page.url] %}
+  {% if comment_file %}
+    {% include {{ comment_file }} %}
+  {% endif %}
+
 </div>

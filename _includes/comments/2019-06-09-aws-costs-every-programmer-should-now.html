@@ -1,0 +1,132 @@
+<div class="static-comments">
+  <h3 class="comments-title">16 Comments</h3>
+  <p class="comments-note"><em>These are archived comments from a previous comment system.</em></p>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">FibreTiger.Co.Za</span>
+    <span class="comment-date">June 09, 2019 at 15:26</span>
+  </div>
+  <div class="comment-body"><p>Forgot how expensive aws actually is...</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Ryan Kearney</span>
+    <span class="comment-date">June 09, 2019 at 18:10</span>
+  </div>
+  <div class="comment-body"><p>Don't forget S3 Glacier Deep Archive $0.001/mo</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">orubel</span>
+    <span class="comment-date">June 09, 2019 at 18:17</span>
+  </div>
+  <div class="comment-body"><p>AWS is not a cost benefit or a scalability benefit. It is an architecture benefit for those who don't want to have to maintain, pay and do it themselves. Thats IT! Period. The best benefit they offer is as backup and emergency deployment for.</p></div>
+  <div class="comment-replies">
+<div class="comment comment-depth-1">
+  <div class="comment-header">
+    <span class="comment-author">lbptvrpo</span>
+    <span class="comment-date">June 09, 2019 at 19:12</span>
+  </div>
+  <div class="comment-body"><p>Yes!</p><p>And the benefit is greatest to those with sporadic bursts of demand. Netflix, for instance, spins up thousands of servers on Friday and Saturday evening. By midnight, the servers are going away. They buy only a few hours.</p><p>If you're going to keep a machine running all of the time, it can get expensive for what you buy.</p></div>
+  <div class="comment-replies">
+<div class="comment comment-depth-2">
+  <div class="comment-header">
+    <span class="comment-author">orubel</span>
+    <span class="comment-date">September 24, 2019 at 23:17</span>
+  </div>
+  <div class="comment-body"><p>exactly. An architectural benefit... like I said.</p></div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Nsubuga Kasozi</span>
+    <span class="comment-date">June 10, 2019 at 06:59</span>
+  </div>
+  <div class="comment-body"><p>Nice, Can you include AWS Serverless options like using AWS lambda/API Gateway. I think it would be much cheaper than looking at full blown EC2 instances</p></div>
+  <div class="comment-replies">
+<div class="comment comment-depth-1">
+  <div class="comment-header">
+    <span class="comment-author">Julien Laurenceau</span>
+    <span class="comment-date">June 11, 2019 at 19:46</span>
+  </div>
+  <div class="comment-body"><p>Are you kidding ? <br>Outside free tier AWS Lambda cost 6x the price of EC2.</p></div>
+  <div class="comment-replies">
+<div class="comment comment-depth-2">
+  <div class="comment-header">
+    <span class="comment-author">Nsubuga Kasozi</span>
+    <span class="comment-date">June 13, 2019 at 06:19</span>
+  </div>
+  <div class="comment-body"><p>thats the question. How is AWS lamdba 6x the price of EC2, if you are not running some continuous long running job, AWS lambda always beats the price of EC2. See <a href="https://www.trek10.com/blog/lambda-cost/" rel="nofollow noopener" target="_blank" title="https://www.trek10.com/blog/lambda-cost/">here</a>. Many times, the long running jobs especially those that are polling-heavy or memory intensive can be redesigned to be event driven and fit comfortably within AWS lambda. Am aware of the additional costs tied to AWS API gateway but either way, nothing compared to these EC2 costs</p></div>
+  <div class="comment-replies">
+<div class="comment comment-depth-3">
+  <div class="comment-header">
+    <span class="comment-author">Julien Laurenceau</span>
+    <span class="comment-date">June 13, 2019 at 20:33</span>
+  </div>
+  <div class="comment-body"><p>6x the price. Lambda do not always beat the price of EC2 especially if you are outside free tier.<br>They are uber interesting for small workloads and/or extra bursty workload.<br>If you can live with autoscaling pools of EC2 to adjust load it is cheaper.<br><a href="https://pagertree.com/2018/03/21/serverless-part-3-serverless-costs/" rel="nofollow noopener" target="_blank" title="https://pagertree.com/2018/03/21/serverless-part-3-serverless-costs/">https://pagertree.com/2018/...</a></p></div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Guilherme Matuella</span>
+    <span class="comment-date">June 10, 2019 at 10:19</span>
+  </div>
+  <div class="comment-body"><p>I've recently felt the pain of the NAT Gateways costs! Yes, they're managed by AWS in comparison to NAT Instances, but that thing is $0.045 per HOUR + $0.045 per GB transferred - that's easily $50 per month PER NAT. Obviously we want HA, so there'll be multiple of these sucking our money out.</p></div>
+  <div class="comment-replies">
+<div class="comment comment-depth-1">
+  <div class="comment-header">
+    <span class="comment-author">Bogdan</span>
+    <span class="comment-date">June 10, 2019 at 11:02</span>
+  </div>
+  <div class="comment-body"><p>These NAT GW costs can easily be avoided by using TGW and PrivateLink (or VPC) Endpoints (which redirect/restrict NAT traffic and use the AWS internal network instead for AWS internal services).</p><p>This is not to say that they couldn't reduce the prices and make them more accessible for devs.</p></div>
+  <div class="comment-replies">
+<div class="comment comment-depth-2">
+  <div class="comment-header">
+    <span class="comment-author">Guilherme Matuella</span>
+    <span class="comment-date">June 10, 2019 at 14:28</span>
+  </div>
+  <div class="comment-body"><p>Didn't knew this! Thanks for the tip!</p></div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Jerome Loisel</span>
+    <span class="comment-date">June 12, 2019 at 12:45</span>
+  </div>
+  <div class="comment-body"><p>You should have mentioned "Each vCPU is a thread of a physical CPU core". Which means, when you buy an m5.large with 2 vCPUs, you get only one physical core and one logical core. That makes vCPU even more expensive.</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Flavius Aspra</span>
+    <span class="comment-date">June 16, 2019 at 17:33</span>
+  </div>
+  <div class="comment-body"><blockquote>but the cost of writing a lot of objects in S3 made the team write their own filesystem on top of S3.</blockquote><p></p><p>Care to elaborate? How would the resulting thing resemble anything like a filesystem? And how did a custom FS solve the problem?</p></div>
+  <div class="comment-replies">
+<div class="comment comment-depth-1">
+  <div class="comment-header">
+    <span class="comment-author">Zzznorch</span>
+    <span class="comment-date">June 17, 2019 at 19:40</span>
+  </div>
+  <div class="comment-body"><p>I personally do not know what they did but since you pay for GET's and PUT's as well, one could, for example, ZIP up a thousand files and store that ZIP on S3 with only one PUT. I would image a custom file system might do some similar by batching several object into a pseudo container and storing it with one PUT.</p></div>
+</div>
+  </div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Zzznorch</span>
+    <span class="comment-date">June 17, 2019 at 18:35</span>
+  </div>
+  <div class="comment-body"><p>Actually there are two main storage areas of AWS: the object based S3 and the block based EBS. EBS is very expensive compared to S3. My AWS usage is limited to Alexa development and runs about $1.15/month. However, approximate $1 of that cost is an 8GB EC2 AMI image I have in EBS. CloudWatch is also another storage medium and it too can get expensive if you do not purge your logs (I keep mine between one and three days depending on the function I am dealing with).</p></div>
+</div>
+</div>

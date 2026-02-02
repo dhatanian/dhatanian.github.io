@@ -1,0 +1,102 @@
+<div class="static-comments">
+  <h3 class="comments-title">14 Comments</h3>
+  <p class="comments-note"><em>These are archived comments from a previous comment system.</em></p>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Anonymous</span>
+    <span class="comment-date">September 02, 2014 at 23:06</span>
+  </div>
+  <div class="comment-body"><p>Hi David,<br><br>Excellent tutorial! <br><br>I get an error while publishing my demo app to chrome web store. <br><br>"API Console project with the id specified in the manifest&amp;#39s api_console_project_id field, does not have Google Apps Marketplace SDK enabled."<br><br>I have enabled the marketplace sdk for the project.<br><br>Did you have to get your app reviewed before you could publish your demo app to web store?</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">David Hatanian</span>
+    <span class="comment-date">September 02, 2014 at 23:23</span>
+  </div>
+  <div class="comment-body"><p>Hey, I believe you&amp;#39re the one who posted on Stack Overflow here : <a href="http://stackoverflow.com/questions/25635068/error-while-publishing-to-chrome-web-store" rel="nofollow noopener" target="_blank" title="http://stackoverflow.com/questions/25635068/error-while-publishing-to-chrome-web-store">http://stackoverflow.com/qu...</a><br><br>I have added a comment on your question -)</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Grant Ammons</span>
+    <span class="comment-date">September 15, 2014 at 10:03</span>
+  </div>
+  <div class="comment-body"><p>Hi there,<br><br>Excellent tutorial, but it no longer works.  When installing the app, I get prompted at a domain level.  However when attempting to access the app, I get prompted for access again as a user.</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">David Hatanian</span>
+    <span class="comment-date">September 15, 2014 at 10:13</span>
+  </div>
+  <div class="comment-body"><p>This comment has been removed by the author.</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Adrian Ossowski</span>
+    <span class="comment-date">September 15, 2014 at 11:20</span>
+  </div>
+  <div class="comment-body"><p>Hi David,<br><br>I just noticed the webstore link installed a an app called "Marketplace SSO Demo" with ID 368362145081.<br><br>But when I hit <a href="https://revevol-marketplace-sso-demo.appspot.com/secured" rel="nofollow noopener" target="_blank" title="https://revevol-marketplace-sso-demo.appspot.com/secured">https://revevol-marketplace...</a>  it shows the consent screen which reads "Demo Marketplace SSO 2 wants"  and in the url you can see the client_id param starts with 233290130899.<br><br>So.. if I understand it correctly it installs one app but asks for permissions for another?</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">David Hatanian</span>
+    <span class="comment-date">September 15, 2014 at 12:21</span>
+  </div>
+  <div class="comment-body"><p>Thank you for spotting this Adrian. It was probably an old version of the application. I updated it.</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">David Hatanian</span>
+    <span class="comment-date">September 15, 2014 at 12:22</span>
+  </div>
+  <div class="comment-body"><p>Hey Grant, Adrian just commented below to warn that the client id I was using was not valid. Can you retry now ?</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Grant Ammons</span>
+    <span class="comment-date">September 15, 2014 at 12:35</span>
+  </div>
+  <div class="comment-body"><p>Hi David,<br><br>Yup, seems fixed now.  Thanks!</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Khushal Patel</span>
+    <span class="comment-date">September 16, 2014 at 07:20</span>
+  </div>
+  <div class="comment-body"><p>Our app get rejected by the chrome store reason given by them is it does not provide domain-wide SSO, while investigating the code I came across the issue is that when asking for <a href="https://www.googleapis.com/auth/plus.login" rel="nofollow noopener" target="_blank" title="https://www.googleapis.com/auth/plus.login">https://www.googleapis.com/...</a> scope in the request as it will causes confirmation popup for access to users&amp;#39 circles for each user and its broke the seamless Domain-Wide SSO for new Google Marketplace apps. Is this an accepted behavior ?</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">David Hatanian</span>
+    <span class="comment-date">September 16, 2014 at 08:15</span>
+  </div>
+  <div class="comment-body"><p>Yes you must not use the plus.login scope anymore, but rather the "email+profile" scope as explained in my article.</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Khushal Patel</span>
+    <span class="comment-date">September 16, 2014 at 08:35</span>
+  </div>
+  <div class="comment-body"><p>Thanks for such a nice article at very right time... it just solved our SSO problem since last one month we are facing this issue and no solution mentioned anywhere else...</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">Grant Ammons</span>
+    <span class="comment-date">September 16, 2014 at 12:56</span>
+  </div>
+  <div class="comment-body"><p>Hi David,<br><br>We&amp;#39re having a specific issue where installing our app via the chrome web store listing is not allowing us to access data to the scopes we requested.  We are consistently getting a ""Requested client not authorized." error.  If we manually add the service account and scopes to the domain, then everything works fine.  <br><br>This is making me think that maybe our marketplace settings are incorrect.  Have you ran into this issue with your test app?  Also, could you post up a screenshot of your marketplace settings?<br><br>Thanks so much!</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">David Hatanian</span>
+    <span class="comment-date">September 16, 2014 at 13:03</span>
+  </div>
+  <div class="comment-body"><p>Hi Jordan, I have added this screenshot (step 4). But since I only worked with authentication, I did not add any specific scope, like Admin SDK or GMail API.</p></div>
+</div>
+<div class="comment comment-depth-0">
+  <div class="comment-header">
+    <span class="comment-author">santlal</span>
+    <span class="comment-date">October 04, 2014 at 06:43</span>
+  </div>
+  <div class="comment-body"><p>Thank you David for this great tutorial. I am able to manage my SSO app <a href="https://chrome.google.com/webstore/detail/gapps-manager/idgedhhbbnblmnieoobodnjlogfgjgae" rel="nofollow noopener" target="_blank" title="https://chrome.google.com/webstore/detail/gapps-manager/idgedhhbbnblmnieoobodnjlogfgjgae">https://chrome.google.com/w...</a> on web store using this tutorial. And is working fine.<br><br>Thanks<br>Santlal<br><a href="https://ssofordemo.appspot.com/index.jsp" rel="nofollow noopener" target="_blank" title="https://ssofordemo.appspot.com/index.jsp">https://ssofordemo.appspot....</a></p></div>
+</div>
+</div>

@@ -1,0 +1,8 @@
+# Posts that have static comments (imported from Disqus)
+# Format: URL path (without domain) -> comment include file
+posts:
+  "/2014/07/03/how-to-provide-seamless-single-sign-on.html": "comments/2014-07-03-how-to-provide-seamless-single-sign-on.html"
+  "/2016/01/31/isolating-integration-tests-with-the-spring-framework.html": "comments/2016-01-31-isolating-integration-tests-with-the-spring-framework.html"
+  "/2016/10/03/what-i-wish-i-knew-earlier.html": "comments/2016-10-03-what-i-wish-i-knew-earlier.html"
+  "/2019/06/09/aws-costs-every-programmer-should-now.html": "comments/2019-06-09-aws-costs-every-programmer-should-now.html"
+  "/2013/03/24/app-engine-channel-api-and-angular-js.html": "comments/2013-03-24-app-engine-channel-api-and-angular-js.html"
